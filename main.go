@@ -12,9 +12,15 @@ func main() {
 	cards = append(cards, newCard("No cards"), "Testing")
 
 	// iterating through the cards
+
+	/* Laymen way
 	for index, eachCard := range cards {
 		fmt.Println(index, eachCard)
 	}
+	*/
+
+	// from deck.go
+	cards.print()
 
 	// fmt.Println(cards)
 
