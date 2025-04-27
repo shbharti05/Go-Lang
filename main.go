@@ -3,25 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// var card string = "Ace of Spades"
+	// Converting string to byte slice
 	card := "Ace of Spades"
-	// card = newCard("Two")
-	fmt.Println(card)
+	fmt.Println([]byte(card))
 
-	// cards := deck{newCard("Five"), newCard("One"), newCard("Three"), "April fool bnaya"}
+	// creating a neew deck of cards
 	cards := newDeck()
 	cards = append(cards, "Testing")
-	// iterating through the cards
-	/* Laymen way
-	for index, eachCard := range cards {
-		fmt.Println(index, eachCard)
-	}
-	*/
-	// from deck.go
-	// cards.print()
 
-	decks := deal(cards, 17)
-	fmt.Println(decks)
+	// Saving deck to file
+	// cards.saveToFile("myDeck")
 
-	// fmt.Println(cards)
+	// Reading deck from the file
+	fmt.Println(newDeckFromFile("myDeck"))
 }
